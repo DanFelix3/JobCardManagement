@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html layout:decorate="layouts/defaultLayout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.thymeleaf.org">
+<head>
+    <title>Create Page</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="container container-shadow mt-4 mb-4 border-dark border-2 p-4 bg-color-green bg-gradient rounded-4 " style="--bs-bg-opacity: .75;">
+        <div class="d-flex p-2 justify-content-center"><h3>Enter the Details</h3></div>
+    <form action="#" method="post" th:action="@{createResult}" th:object="${jobcards}">
+        <div class="mb-3">
+            <label for="id" class="form-label">Id: </label>
+            <input th:field="*{id}" type="text" class="form-control" id="id" >
+            <p class="alert alert-light" th:if="${#fields.hasErrors('id')}" th:errors="*{id}">Id must be provided</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="date" class="form-label">Date: </label>
+            <input th:field="*{date}" type="text" class="form-control" id="date" >
+            <p class="alert alert-light" th:if="${#fields.hasErrors('date')}" th:errors="*{date}">date invalid</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="jobCardNo" class="form-label">Job Card Number: </label>
+            <input th:field="*{jobCardNo}" type="text" class="form-control" id="jobCardNo" >
+            <p class="alert alert-light" th:if="${#fields.hasErrors('jobCardNo')}" th:errors="*{jobCardNo}">Job Card No invalid</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="workAssigned" class="form-label">Work Assigned: </label>
+            <input th:field="*{workAssigned}" type="text" class="form-control" id="workAssigned" >
+            <p class="alert alert-light" th:if="${#fields.hasErrors('workAssigned')}" th:errors="*{workAssigned}">Work Assigned invalid</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="custName" class="form-label">Customer Name: </label>
+            <input th:field="*{custName}" type="text" class="form-control" id="custName" >
+            <p class="alert alert-light" th:if="${#fields.hasErrors('custName')}" th:errors="*{custName}">Customer Name invalid</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="custNo" class="form-label">Customer No: </label>
+            <input th:field="*{custNo}" type="text" class="form-control" id="custNo" >
+            <p class="alert alert-light" th:if="${#fields.hasErrors('custNo')}" th:errors="*{custNo}">Customer No invalid</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="custAddress" class="form-label">Customer Address: </label>
+            <input th:field="*{custAddress}" type="text" class="form-control" id="custAddress" >
+            <p class="alert alert-light" th:if="${#fields.hasErrors('custAddress')}" th:errors="*{custAddress}">Customer Address invalid</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="pinCode" class="form-label">Pincode: </label>
+            <input th:field="*{pinCode}" type="text" class="form-control" id="pinCode" >
+            <p class="alert alert-light" th:if="${#fields.hasErrors('pinCode')}" th:errors="*{pinCode}">Pincode invalid</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="vehModel" class="form-label">Vehicle Model: </label>
+            <input th:field="*{vehModel}" type="text" class="form-control" id="vehModel" >
+            <p class="alert alert-light" th:if="${#fields.hasErrors('vehModel')}" th:errors="*{vehModel}">Vehicle Model invalid</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="veh_reg_no" class="form-label">Vehicle Reg Number: </label>
+            <input th:field="*{veh_reg_no}" type="text" class="form-control" id="veh_reg_no" >
+            <p class="alert alert-light" th:if="${#fields.hasErrors('veh_reg_no')}" th:errors="*{veh_reg_no}">Vehicle Reg Number invalid</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="custVoice" class="form-label">Customer Voice: </label>
+            <input th:field="*{custVoice}" type="text" class="form-control" id="custVoice" >
+            <p class="alert alert-light" th:if="${#fields.hasErrors('custVoice')}" th:errors="*{custVoice}">Customer Voice invalid</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="status" class="form-label">Status: </label>
+            <input th:field="*{status}" type="text" class="form-control" id="status" >
+            <p class="alert alert-light" th:if="${#fields.hasErrors('status')}" th:errors="*{status}">Status invalid</p>
+        </div>
+        <div class="d-flex p-2 justify-content-center">
+        <button type="submit" class="btn btn-dark border-white border-2" style="--bs-border-opacity: .25;">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
+
+</html>

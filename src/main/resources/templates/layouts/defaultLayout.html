@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html decorate="layouts/defaultTemplate"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.thymeleaf.org">
+<head>
+    <meta charset = "UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 m-0" >
+    <div th:replace="layouts/commonHeader :: header">Header</div>
+
+    <section layout:fragment="content">
+        <p>replace content</p>
+    </section>
+    <div class = "mt-auto" th:replace="layouts/commonFooter :: footer">Footer</div>
+
+    <script src="/js/bootstrap.bundle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html layout:decorate="layouts/defaultLayout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.thymeleaf.org">
+<head>
+    <title>Search Page</title>
+</head>
+<body>
+    <div class="container my-5" layout:fragment="content">
+        <form action="#" method="post" th:action="@{searchResult}" th:object="${searches}">
+            <div class="mb-3">
+                <input th:field="*{searchItem}" type="text" class="form-control" id="searchItem" aria-describedby="searchItemHelp">
+                <div id="searchItemHelp" class="form-text">Provide with a value to search</div>
+                <p class="alert alert-danger" th:if="${#fields.hasErrors('searchItem')}" th:errors="*{searchItem}">searchItem invalid</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+</body>
+
+</html>

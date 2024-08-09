@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html layout:decorate="layouts/defaultLayout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.thymeleaf.org">
+<head>
+    <title>View Page</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <br>
+<h2 th:text="${title}" class="ms-2 pb-0 mb-0" style="font-weight:650 !important; "></h2>
+    <br>
+<div class="table-responsive rounded-3 p-0 m-2">
+<table class="table table-striped rounded-3 overflow-hidden">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Date</th>
+        <th scope="col">Jobcard No</th>
+        <th scope="col">Work Assigned</th>
+        <th scope="col">Customer Name</th>
+        <th scope="col">Customer Number</th>
+        <th scope="col">Customer Address</th>
+        <th scope="col">Pincode</th>
+        <th scope="col">Vehicle Model</th>
+        <th scope="col">Registration No</th>
+        <th scope="col">Customer Voice</th>
+        <th scope="col">Status</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="jobcard : ${jobcards}">
+        <td th:text="${jobcard.id}"></td>
+        <td th:text="${jobcard.date}"></td>
+        <td th:text="${jobcard.jobCardNo}"></td>
+        <td th:text="${jobcard.workAssigned}"></td>
+        <td th:text="${jobcard.custName}"></td>
+        <td th:text="${jobcard.custNo}"></td>
+        <td th:text="${jobcard.custAddress}"></td>
+        <td th:text="${jobcard.pinCode}"></td>
+        <td th:text="${jobcard.vehModel}"></td>
+        <td th:text="${jobcard.veh_reg_no}"></td>
+        <td th:text="${jobcard.custVoice}"></td>
+        <td th:text="${jobcard.status}"></td>
+
+    </tr>
+    </tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

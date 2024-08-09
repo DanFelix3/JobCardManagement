@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html layout:decorate="layouts/defaultLayout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org">
+<body>
+    <div class="mt-4 container-fluid bg-light" th:object="${loginModel}" layout:fragment="content">
+        <p>Username: <span th:text="*{username}"></span></p>
+        <p>Password: <span th:text="*{password}"></span></p>
+    </div>
+</body>
+</html>
